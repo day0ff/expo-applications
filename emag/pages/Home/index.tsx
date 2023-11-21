@@ -11,7 +11,7 @@ import Star from 'assets/star-fill.svg';
 
 import i18n from "i18next";
 import {useTheme} from "hooks";
-import Sprite from "components/Sprite";
+import Sprite from "system/components/Sprite";
 
 import {useStyles} from "./styles";
 
@@ -27,9 +27,7 @@ const Home = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>{t`page.home.title`}</Text>
-            <View>
-                <Sprite isRunning={isRunning} width={200} height={200} source={Cat} position={position}/>
-            </View>
+            <Sprite isRunning={isRunning} width={200} height={200} source={Cat} position={position}/>
             <Button title="Toggle Run" onPress={() => setIsRunning(cur => !cur)}/>
             <Button title="New From" onPress={() => setPosition(4)}/>
             <Button title="RU" onPress={() => i18n.changeLanguage('ru')}/>

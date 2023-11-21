@@ -2,7 +2,7 @@ import * as Localization from 'expo-localization';
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
-import { en, ru } from "localization";
+import { en, ru } from "./translations";
 
 const resources = {
     en: {

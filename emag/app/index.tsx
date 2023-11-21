@@ -6,7 +6,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { LogBox } from 'react-native';
 LogBox.ignoreLogs(['new NativeEventEmitter']);
 
-import i18n from 'app/i18n/config';
+import i18n from 'localization/i18n.config';
 import ThemeProvider from "context/Theme/provider";
 
 import Home from "../pages/Home";
