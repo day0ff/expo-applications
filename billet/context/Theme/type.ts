@@ -7,8 +7,8 @@ export type ColorType = "title" | "text" | "label" | "link" | "background" | "ac
 export type ColorSchemeType = "light" | "dark" | null | undefined;
 
 export type ThemeType = {
-    "colorScheme": ColorSchemeType;
-    fontSize: Record<FontSizeType, number>,
-    "lineHeight": Record<LineHeightType, number>,
-    "color": Record<ColorType, string>
+    colorScheme: ColorSchemeType;
+    fontSize: Record<FontSizeType, string>,
+    lineHeight: Record<LineHeightType, string>,
+    color: Record<ColorType, string>
 }

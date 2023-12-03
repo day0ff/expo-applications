@@ -1,5 +1,4 @@
 import {useMediaQuery} from "react-responsive";
-import '@expo/match-media'
 
 export const useDevice = () => {
     const isMobile = useMediaQuery({maxWidth: 480});

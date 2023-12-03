@@ -8,7 +8,7 @@ export type ColorSchemeType = "light" | "dark" | null | undefined;
 
 export type ThemeType = {
     colorScheme: ColorSchemeType;
-    fontSize: Record<FontSizeType, number>,
-    lineHeight: Record<LineHeightType, number>,
+    fontSize: Record<FontSizeType, string>,
+    lineHeight: Record<LineHeightType, string>,
     color: Record<ColorType, string>
 }

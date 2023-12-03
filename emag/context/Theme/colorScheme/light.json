@@ -1,18 +1,18 @@
 {
   "colorScheme": "light",
   "fontSize": {
-    "huge": 24,
-    "large": 18,
-    "medium": 12,
-    "small": 10,
-    "tiny": 8
+    "huge": "24px",
+    "large": "18px",
+    "medium": "12px",
+    "small": "10px",
+    "tiny": "8px"
   },
   "lineHeight": {
-    "huge": 28,
-    "large": 22,
-    "medium": 16,
-    "small": 14,
-    "tiny": 11
+    "huge": "28px",
+    "large": "22px",
+    "medium": "16px",
+    "small": "14px",
+    "tiny": "11px"
   },
   "color": {
     "title": "#000000",

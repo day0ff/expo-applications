@@ -1,5 +1,8 @@
-import {useCallback, useMemo, useState} from "react";
-import {useColorScheme} from 'react-native';
+import React, {useCallback, useMemo, useState} from "react";
+import {useColorScheme} from "react-native";
+import {ThemeProvider} from "styled-components/native";
+
+import {useDevice} from "hooks";
 
 import {light, dark} from "./colorScheme";
 import {ThemeContext} from "./context";
@@ -7,10 +10,11 @@ import {ThemeContext} from "./context";
 import type {FC, PropsWithChildren} from "react";
 import type {ThemeType, ColorSchemeType} from "./type";
 
-const getTheme = (colorScheme: ColorSchemeType) => (colorScheme === "light" ? light : dark) as ThemeType;
+const getTheme = (colorScheme: ColorSchemeType) => (colorScheme === 'light' ? light : dark) as ThemeType;
 
-const ThemeProvider: FC<PropsWithChildren> = ({children}) => {
+const ThemeProviderComponent: FC<PropsWithChildren> = ({children}) => {
     const colorScheme = useColorScheme();
+    const device = useDevice();
 
     const [theme, setTheme] = useState<ThemeType>(getTheme(colorScheme));
 
@@ -23,7 +27,15 @@ const ThemeProvider: FC<PropsWithChildren> = ({children}) => {
         toggleTheme
     }), [theme, toggleTheme]);
 
-    return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+    const themeWithDevice = {...theme, ...device};
+
+    return (
+        <ThemeContext.Provider value={value}>
+            <ThemeProvider theme={themeWithDevice}>
+                {children}
+            </ThemeProvider>
+        </ThemeContext.Provider>
+    )
 }
 
-export default ThemeProvider;
+export default ThemeProviderComponent;

@@ -1,18 +1,20 @@
-import {makeStyles} from "system/makeStyles";
+import styled from "styled-components/native";
 
-export const useStyles =  makeStyles((theme) => ({
-    container: {
-        flex: 1,
-        backgroundColor: theme.isLaptop ? theme.color.primary : theme.color.background,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    text: {
-        color: theme.color.accent,
-        fontSize: theme.fontSize.huge,
-        lineHeight: theme.lineHeight.huge,
-    },
-    star: {
-        color: theme.color.primary
-    }
+import Star from 'assets/star-fill.svg';
+
+export const TextStyled = styled.Text(({theme}) => ({
+    color: theme.color.accent,
+    fontSize: theme.fontSize.huge,
+    lineHeight: theme.lineHeight.huge,
 }));
+
+export const ContainerStyled = styled.View(({theme}) => ({
+    flex: 1,
+    backgroundColor: theme.isLaptop ? theme.color.primary : theme.color.background,
+    alignItems: 'center',
+    justifyContent: 'center',
+}));
+
+export const StarStyled = styled(Star)`
+  color: ${({theme}) => theme.color.primary}
+`;
