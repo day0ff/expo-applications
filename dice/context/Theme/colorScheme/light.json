@@ -1,0 +1,27 @@
+{
+  "colorScheme": "light",
+  "fontSize": {
+    "huge": "24px",
+    "large": "18px",
+    "medium": "12px",
+    "small": "10px",
+    "tiny": "8px"
+  },
+  "lineHeight": {
+    "huge": "28px",
+    "large": "22px",
+    "medium": "16px",
+    "small": "14px",
+    "tiny": "11px"
+  },
+  "color": {
+    "title": "#000000",
+    "text": "#111111",
+    "label": "#999999",
+    "link": "FF3333",
+    "background": "#FFFFFF",
+    "accent": "#990000",
+    "primary": "#FF0000",
+    "secondary": "#FF6666"
+  }
+}
