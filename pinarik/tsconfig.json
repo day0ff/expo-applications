@@ -1,0 +1,12 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "strict": true
+  },
+  "include": [
+    "app",
+    "custom.d.ts",
+    "context/Theme/styled.d.ts"
+  ]
+}
